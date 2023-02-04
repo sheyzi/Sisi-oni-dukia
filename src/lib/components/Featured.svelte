@@ -1,7 +1,7 @@
 <section class="md:py-10 py-5 max-w-5xl mx-auto px-5 about text-black">
 	<div>
 		<h2 class="text-center text-4xl font-serif font-medium">Featured Apartments</h2>
-		<div class="grid grid-cols-3 gap-10">
+		<div class="grid md:grid-cols-3 grid-cols-1 gap-10">
 			{#each [1, 2, 3, 4, 5, 6] as _}
 				<div
 					class="card w-full bg-base-100 rounded shadow transition-shadow hover:shadow-xl border border-gray-400 mt-10"
