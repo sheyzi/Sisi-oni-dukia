@@ -199,6 +199,12 @@
 		color: #000;
 		margin-top: 1rem;
 		font-weight: 600;
+		transition: transform 300ms ease;
+	}
+
+	.outstanding-button:hover {
+		background-color: #000;
+		color: #fff;
 	}
 
 	@media (max-width: 768px) {

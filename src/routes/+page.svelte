@@ -3,13 +3,14 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
 	import Outstanding from '$lib/components/Outstanding.svelte';
+	import Featured from '$lib/components/Featured.svelte';
 
 	export let data: any;
 	const { homepage } = data;
 </script>
 
 <svelte:head>
-	<title>Sisi Oni Dukia - Home</title>
+	<title>Sisi Oni Dukia - Your next door realtor</title>
 </svelte:head>
 
 <Hero
@@ -24,3 +25,4 @@
 	title={homepage.section1_title}
 	image2={homepage.section1_image_2}
 />
+<Featured />

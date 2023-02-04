@@ -39,7 +39,9 @@
 			<p class="text-black">
 				{text}
 			</p>
-			<a href="/apartments" class="btn rounded-none hover:scale-90">Get your next apartment</a>
+			<a href="/apartments" class="btn rounded-none hover:scale-90 bg-black hover:bg-black"
+				>Get your next apartment</a
+			>
 		</div>
 	</div>
 </section>
