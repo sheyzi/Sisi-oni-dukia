@@ -1,13 +1,11 @@
 <footer class="md:py-10 py-5 block max-w-5xl mx-auto md:px-10 px-5 footer bg-black text-white">
-	<div class="grid grid-cols-2 w-full">
-		<div>
+	<div class="flex justify-between items-center flex-col md:flex-row w-full">
+		<div class="text-center">
 			<a
 				href="/"
-				class="text-[#A79A86] flex items-center font-serif md:text-3xl text-2xl font-semibold space-x-2"
+				class="text-[#A79A86] w-full items-center font-serif md:text-3xl text-2xl font-semibold md:space-x-2"
 			>
-				<!-- <iconify-icon inline icon="clarity:dot-circle-line" /> -->
-				<p>Sisi Oni Dukia</p>
-				<!-- <iconify-icon inline icon="clarity:dot-circle-line" /> -->
+				<p class="text-center ">Sisi Oni Dukia</p>
 			</a>
 
 			<a class="my-4 flex space-x-2 items-center" href="mailto:admin@sisionidukia.com">
@@ -16,11 +14,11 @@
 			</a>
 		</div>
 		<div>
-			<div class="flex space-x-5">
-				<a class="my-4 flex space-x-2 items-center" href="/">
-					<iconify-icon icon="ic:round-mail-outline" width="20" />
+			<div class="flex space-x-5 justify-center md:justify-start">
+				<a class="my-4 flex  items-center" href="/">
+					<iconify-icon icon="mdi:instagram" width="20" />
 				</a>
-				<a class="my-4 flex space-x-2 items-center" href="/">
+				<a class="my-4 flex items-center" href="/">
 					<iconify-icon icon="ph:twitter-logo-fill" width="20" />
 				</a>
 			</div>

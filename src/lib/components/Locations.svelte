@@ -97,4 +97,47 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
+
+	@media (max-width: 768px) {
+		.accordion {
+			flex-direction: column;
+			height: 100%;
+			gap: 16px;
+		}
+
+		.image {
+			height: 50%;
+			border-radius: 5px;
+		}
+
+		.image img {
+			border-radius: 5px;
+		}
+
+		.image.default {
+			flex: 1 1 0%;
+		}
+
+		.image:hover {
+			flex: 1 1 0%;
+		}
+
+		.image .overlay,
+		.image.default .overlay {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.image .overlay p,
+		.image.default .overlay p {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.image img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			aspect-ratio: 12/9;
+		}
+	}
 </style>
