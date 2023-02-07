@@ -2,12 +2,13 @@ import supabase from '../lib/supabase';
 
 export const load = async () => {
 	const { data } = await supabase
-		.from('homepage')
-		.select('*')
+		.from('apartments')
+		.select('*, images(*)')
+		.filter('isFeatured', 'eq', true)
 		.order('created_at', { ascending: false })
-		.limit(1);
+		.limit(6);
 
 	return {
-		homepage: data ? data[0] : {}
+		featuredApartments: data
 	};
 };
