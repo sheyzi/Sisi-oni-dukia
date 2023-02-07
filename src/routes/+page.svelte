@@ -6,14 +6,9 @@
 	import Amenities from '../lib/components/Amenities.svelte';
 	import Locations from '../lib/components/Locations.svelte';
 	import SpecialRequest from '../lib/components/SpecialRequest.svelte';
-	import { onMount } from 'svelte';
 
 	export let data: any;
 	const { homepage, featuredApartments } = data;
-
-	onMount(() => {
-		console.log(homepage);
-	});
 </script>
 
 <svelte:head>

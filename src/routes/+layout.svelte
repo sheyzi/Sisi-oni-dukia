@@ -7,6 +7,9 @@
 	import Lenis from '@studio-freight/lenis';
 	import { onMount } from 'svelte';
 
+	import { navigating } from '$app/stores';
+	import NavigationLoader from '../lib/components/NavigationLoader.svelte';
+
 	export let data: any;
 	const { homepage } = data;
 
@@ -37,6 +40,9 @@
 </script>
 
 <div class="flex flex-col min-h-screen">
+	{#if $navigating}
+		<NavigationLoader />
+	{/if}
 	<LoadScreen />
 	<Navbar />
 	<main class="grow">
