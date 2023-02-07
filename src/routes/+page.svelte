@@ -13,6 +13,30 @@
 
 <svelte:head>
 	<title>Sisi Oni Dukia - Your next door realtor</title>
+	<meta name="description" content="Sisi Oni Dukia - Your next door realtor" />
+	<!-- OG and Twitter meta tags -->
+	<meta property="og:title" content="Sisi Oni Dukia - Your next door realtor" />
+	<meta
+		property="og:description"
+		content="Discover a world of luxury living at Sisi Oni Dukia, where every moment is elevated with exceptional comfort and style. Whether you're traveling for business or leisure, our fully-equipped apartments offer the perfect blend of convenience, privacy, and luxury, making us the ideal choice for your next stay. "
+	/>
+	<meta
+		property="og:image"
+		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/sidekix-media-xroM8RaMnSI-unsplash.jpg"
+	/>
+	<meta property="og:url" content="https://sisionidukia.com/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@sisionidukia" />
+	<meta name="twitter:creator" content="@sheyzi" />
+	<meta name="twitter:title" content="Sisi Oni Dukia - Your next door realtor" />
+	<meta
+		name="twitter:description"
+		content="Discover a world of luxury living at Sisi Oni Dukia, where every moment is elevated with exceptional comfort and style. Whether you're traveling for business or leisure, our fully-equipped apartments offer the perfect blend of convenience, privacy, and luxury, making us the ideal choice for your next stay. "
+	/>
+	<meta
+		name="twitter:image"
+		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/sidekix-media-xroM8RaMnSI-unsplash.jpg"
+	/>
 </svelte:head>
 
 <Hero
