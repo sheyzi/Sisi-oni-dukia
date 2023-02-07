@@ -22,28 +22,12 @@
 		</ul>
 
 		<div class="md:flex items-center hidden space-x-5 uppercase">
-			<a href="/home" class="nav-item ">Home</a>
+			<a href="/" class="nav-item ">Home</a>
+			<a href="/apartments" class="nav-item ">Apartments</a>
 
-			<div class="dropdown">
-				<div
-					tabindex="-1"
-					class="nav-item cursor-pointer space-x-1 flex items-center first-letter:"
-				>
-					<p>Apartments</p>
-					<iconify-icon inline icon="material-symbols:keyboard-arrow-down" height="30" />
-				</div>
-				<ul tabindex="-1" class="dropdown-content menu p-2 shadow bg-black rounded-box w-52">
-					<li><a href="/apartments" class="hover:text-[#A79A86]">1 Bedroom</a></li>
-					<li><a href="/apartments" class="hover:text-[#A79A86]">2 Bedrooms</a></li>
-					<li><a href="/apartments" class="hover:text-[#A79A86]">3 Bedrooms</a></li>
-					<li><a href="/apartments" class="hover:text-[#A79A86]">4 Bedrooms</a></li>
-					<li><a href="/apartments" class="hover:text-[#A79A86]">5 Bedrooms</a></li>
-				</ul>
-			</div>
+			<a href="/about" class="nav-item ">About</a>
 
-			<a href="/projects" class="nav-item ">About</a>
-
-			<a href="/blog" class="nav-item ">Contact</a>
+			<a href="/contact" class="nav-item ">Contact</a>
 		</div>
 
 		<div class="md:hidden">
@@ -65,12 +49,12 @@
 			/>
 		</button>
 		<div class="mobile-content">
-			<a href="/home" class="nav-item">Home</a>
+			<a href="/" class="nav-item">Home</a>
 
-			<a href="/projects" class="nav-item">Apartments</a>
-			<a href="/projects" class="nav-item">About</a>
+			<a href="/apartments" class="nav-item">Apartments</a>
+			<a href="/about" class="nav-item">About</a>
 
-			<a href="/blog" class="nav-item">Contact</a>
+			<a href="/contact" class="nav-item">Contact</a>
 		</div>
 	</div>
 </div>
