@@ -23,7 +23,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/sidekix-media-xroM8RaMnSI-unsplash.jpg"
+		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/spacejoy-q3Qd86sfaoU-unsplash_1_-min_xi1daf%20(1).jpg"
 	/>
 	<meta property="og:url" content="https://sisionidukia.com/" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/sidekix-media-xroM8RaMnSI-unsplash.jpg"
+		content="https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/spacejoy-q3Qd86sfaoU-unsplash_1_-min_xi1daf%20(1).jpg"
 	/>
 </svelte:head>
 
