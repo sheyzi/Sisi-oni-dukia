@@ -43,6 +43,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Apartments - Sisi Oni Dukia</title>
+</svelte:head>
+
 <header class="header">
 	<div class="overlay" />
 	<div class="header-content max-w-5xl mx-auto px-10 ">
