@@ -15,6 +15,7 @@
 	<title>Sisi Oni Dukia - Your next door realtor</title>
 	<meta name="description" content="Sisi Oni Dukia - Your next door realtor" />
 	<!-- OG and Twitter meta tags -->
+	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Sisi Oni Dukia - Your next door realtor" />
 	<meta
 		property="og:description"
