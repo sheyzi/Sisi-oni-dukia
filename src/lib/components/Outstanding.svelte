@@ -8,6 +8,8 @@
 	export let image: string;
 	export let image2: string;
 
+	export let whatsapp_url: any;
+
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		const mm = gsap.matchMedia();
@@ -163,7 +165,7 @@
 					{text}
 				</p>
 				<div class="outstanding-button-wrapper">
-					<a href="/apartments" class="outstanding-button text-black">Request Availability</a>
+					<a href={whatsapp_url} class="outstanding-button text-black">Request Availability</a>
 				</div>
 			</div>
 		</div>

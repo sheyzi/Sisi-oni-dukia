@@ -7,6 +7,9 @@
 	import Lenis from '@studio-freight/lenis';
 	import { onMount } from 'svelte';
 
+	export let data: any;
+	const { homepage } = data;
+
 	onMount(() => {
 		const lenis = new Lenis({
 			duration: 1.2,
@@ -39,5 +42,9 @@
 	<main class="grow">
 		<slot />
 	</main>
-	<Footer />
+	<Footer
+		instagram_url={homepage.instagram_url}
+		twitter_url={homepage.twitter_url}
+		email={homepage.contact_email}
+	/>
 </div>

@@ -1,3 +1,18 @@
+<script lang="ts">
+	export let locations: string[];
+
+	const images = [
+		'https://www.tobitemplehomes.com/wp-content/uploads/2022/08/IMG-20220813-WA0054.jpg',
+		'https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta529928-___CeInxUEunB9___-2.jpg',
+		'https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta335793-___CXEDH0hovRa___-6.jpg',
+		'https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta350638-___CbvKN7oguhZ___-1.jpg'
+	];
+
+	const getImage = (index: number) => {
+		return images[index];
+	};
+</script>
+
 <section class="md:py-10 py-5 max-w-5xl mx-auto md:px-10 px-5 locations">
 	<div>
 		<h2 class="text-black font-serif text-4xl text-center">Some Of Our Locations</h2>
@@ -5,34 +20,12 @@
 			Take a look at some pretty pictures captured in and around Various Shortlets.
 		</p>
 		<div class="accordion mt-5">
-			<a href="/apartments" class="image default">
-				<div class="overlay"><p>Lekki Phase 1</p></div>
-				<img
-					src="https://www.tobitemplehomes.com/wp-content/uploads/2022/08/IMG-20220813-WA0054.jpg"
-					alt=""
-				/>
-			</a>
-			<a href="/apartments" class="image">
-				<div class="overlay"><p>Lekki Phase 1</p></div>
-				<img
-					src="https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta529928-___CeInxUEunB9___-2.jpg"
-					alt=""
-				/>
-			</a>
-			<a href="/apartments" class="image">
-				<div class="overlay"><p>Lekki Phase 1</p></div>
-				<img
-					src="https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta335793-___CXEDH0hovRa___-6.jpg"
-					alt=""
-				/>
-			</a>
-			<a href="/apartments" class="image">
-				<div class="overlay"><p>Lekki Phase 1</p></div>
-				<img
-					src="https://www.tobitemplehomes.com/wp-content/uploads/2022/08/insta350638-___CbvKN7oguhZ___-1.jpg"
-					alt=""
-				/>
-			</a>
+			{#each locations as location, index}
+				<a href="/apartments" class="image" class:default={index === 0}>
+					<div class="overlay"><p>{location}</p></div>
+					<img src={getImage(index)} alt="" />
+				</a>
+			{/each}
 		</div>
 	</div>
 </section>
