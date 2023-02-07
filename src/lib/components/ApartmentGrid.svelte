@@ -1,18 +1,8 @@
 <script lang="ts">
 	import { formatPrice } from '../utils/format';
+	import { getApartmentUrl, getDefaultImage } from '../utils/helpers';
 
 	export let apartments: any;
-
-	const getDefaultImage = (images: any) => {
-		const image = images.find((image: any) => image.default);
-		return image
-			? image.url
-			: 'https://rplpttxffjajeysdeidt.supabase.co/storage/v1/object/public/public/roberto-nickson-emqnSQwQQDo-unsplash.jpg';
-	};
-
-	const getUrl = (apartment: any) => {
-		return `/apartments/${apartment.slug}`;
-	};
 </script>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5">
@@ -20,7 +10,7 @@
 		<div
 			class="card w-full bg-base-100 rounded shadow transition-shadow hover:shadow-xl border border-gray-400 mt-10"
 		>
-			<a href={getUrl(apartment)}>
+			<a href={getApartmentUrl(apartment)}>
 				<span class="badge absolute top-5 bg-black text-white right-5 z-10"
 					>{apartment.location}</span
 				>
@@ -40,7 +30,9 @@
 				<p class="text-sm">{formatPrice(apartment.price)} / night</p>
 			</div>
 			<div class="my-5 flex justify-center">
-				<a href={getUrl(apartment)} class="uppercase text-sm underline text-center">View details</a>
+				<a href={getApartmentUrl(apartment)} class="uppercase text-sm underline text-center"
+					>View details</a
+				>
 			</div>
 		</div>
 	{:else}
