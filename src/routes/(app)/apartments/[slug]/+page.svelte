@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { formatPrice } from '../../../lib/utils/format';
+	import { formatPrice } from '$lib/utils/format';
 	import {
 		generateApartmentWhatsAppLink,
 		getApartmentUrl,
 		getDefaultImage
-	} from '../../../lib/utils/helpers';
+	} from '$lib/utils/helpers';
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 
 	export let data: any;
 

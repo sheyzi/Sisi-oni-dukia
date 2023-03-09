@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ApartmentGrid from '$lib/components/ApartmentGrid.svelte';
-	import supabase from '../../lib/supabase';
+	import supabase from '$lib/supabase';
 
 	export let data: any;
 

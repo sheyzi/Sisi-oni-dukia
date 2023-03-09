@@ -3,12 +3,14 @@
 	import About from '$lib/components/About.svelte';
 	import Outstanding from '$lib/components/Outstanding.svelte';
 	import Featured from '$lib/components/Featured.svelte';
-	import Amenities from '../lib/components/Amenities.svelte';
-	import Locations from '../lib/components/Locations.svelte';
-	import SpecialRequest from '../lib/components/SpecialRequest.svelte';
+	import Amenities from '$lib/components/Amenities.svelte';
+	import Locations from '$lib/components/Locations.svelte';
+	import SpecialRequest from '$lib/components/SpecialRequest.svelte';
+	import type { HomePage } from '../../lib/types/homepage.type';
 
 	export let data: any;
-	const { homepage, featuredApartments } = data;
+	const { featuredApartments } = data;
+	const homepage: HomePage = data.homepage;
 </script>
 
 <svelte:head>
