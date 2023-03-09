@@ -4,6 +4,6 @@
 
 <AdminNavbar />
 
-<main class="container px-10 mt-10">
+<main class="container mx-auto md:px-10 px-5 md:my-10 my-5 ">
 	<slot />
 </main>

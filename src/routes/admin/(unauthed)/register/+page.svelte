@@ -36,7 +36,7 @@
 
 <div class="w-[80%] max-w-[480px]">
 	<h1 class="text-2xl font-bold md:text-center">Create admin account</h1>
-	<p class="text-center text-sm mt-3">
+	<p class="text-sm mt-3">
 		You are about to create the first admin account. This account will have full access to the
 		application.
 	</p>

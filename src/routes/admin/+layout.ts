@@ -35,7 +35,7 @@ export const load: LayoutLoad = async (event) => {
 	}
 
 	const { session } = await getSupabase(event);
-	if (!session && event.url.pathname !== '/admin/login') {
+	if (!session && !['/admin/login', '/admin/register'].includes(event.url.pathname)) {
 		throw redirect(307, '/admin/login?message=You%20need%20to%20login%20first.&type=info');
 	} else if (session && event.url.pathname === '/admin/login') {
 		// Throw a redirect if the user is logged in and tries to access the login page

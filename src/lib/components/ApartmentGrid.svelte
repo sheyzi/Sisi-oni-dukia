@@ -7,9 +7,7 @@
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5">
 	{#each apartments as apartment}
-		<div
-			class="card w-full bg-base-100 rounded shadow transition-shadow hover:shadow-xl border border-gray-400 mt-10"
-		>
+		<div class="card w-full bg-base-100 rounded shadow-sm transition-shadow hover:shadow  mt-10">
 			<a href={getApartmentUrl(apartment)}>
 				<span class="badge absolute top-5 bg-black text-white right-5 z-10"
 					>{apartment.location}</span

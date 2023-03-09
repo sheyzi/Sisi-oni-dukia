@@ -17,7 +17,7 @@ export const generateApartmentWhatsAppLink = (
 	base_url: string
 ) => {
 	// Generate link with text asking if the apartment is available in english
-	const link = `https://wa.me/${whatsapp_number}?text=Hi%2C%20is%20the%20apartment%20*${
+	const link = `https://wa.me/${whatsapp_number}?text=Hi%2C%20is%20this%20apartment%20*${
 		apartment.title
 	}*%20available%3F%20I%20saw%20it%20on%20${base_url}${getApartmentUrl(apartment)}`;
 	return link;

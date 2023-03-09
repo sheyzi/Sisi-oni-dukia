@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	import type { HomePage } from '$lib/types/homepage.type';
 	import { showToastr } from '../../../lib/utils/helpers';
+	import HomeSection from '$lib/components/admin/HomeSection.svelte';
+	import ImagePreview from '$lib/components/admin/ImagePreview.svelte';
 
 	let loading = false;
 
@@ -76,127 +78,200 @@
 		{:else if homepage}
 			<form>
 				<!-- Hero Section -->
-				<div class="mt-10 shadow-xl p-10 rounded">
-					<div class="form-header">
-						<h2 class="text-xl font-bold">Hero Section</h2>
-						<p class="mt-3">
-							This is the section that appears at the top of the homepage. It contains a title, a
-							description, and an image.
-						</p>
-					</div>
-					<div class="space-y-5 mt-5">
-						<div>
-							<label for="hero_title" class="block text-sm font-medium text-gray-700">
-								Hero Title
-							</label>
-							<div class="mt-1">
-								<input
-									type="text"
-									name="hero_title"
-									id="hero_title"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									bind:value={homepage.hero_title}
-								/>
-							</div>
+				<HomeSection
+					title="Hero Section"
+					description="This is the section that appears at the hero section. It contains a title, a
+							description, and an image."
+				>
+					<div>
+						<label for="hero_title" class="block text-sm font-medium text-gray-700">
+							Hero Title
+						</label>
+						<div class="mt-1">
+							<input
+								type="text"
+								name="hero_title"
+								id="hero_title"
+								class="my_input"
+								bind:value={homepage.hero_title}
+							/>
 						</div>
+					</div>
 
-						<div>
-							<label for="hero_image" class="block text-sm font-medium text-gray-700">
-								Hero Image
-							</label>
-							<div class="mt-1">
+					<div>
+						<label for="hero_image" class="block text-sm font-medium text-gray-700">
+							Hero Image
+						</label>
+						<div class="mt-1">
+							<div class="image_input_group">
 								<input
 									type="text"
 									name="hero_image"
 									id="hero_image"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+									class="my_input"
 									bind:value={homepage.hero_image}
 								/>
-								<p class="mt-2 text-sm text-gray-500">
-									Enter the URL of the image you want to use for the hero section. The recommended
-									image size is at least 1920px wide and 1080px tall.
-								</p>
+								<!-- The button to open modal -->
+								<ImagePreview image={homepage.hero_image} />
 							</div>
-						</div>
 
-						<div>
-							<label for="hero_description" class="block text-sm font-medium text-gray-700">
-								Hero Description
-							</label>
-							<div class="mt-1">
-								<textarea
-									id="hero_description"
-									name="hero_description"
-									rows="3"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									bind:value={homepage.hero_description}
-								/>
-							</div>
+							<p class="mt-2 text-sm text-gray-500">
+								Enter the URL of the image you want to use for the hero section. The recommended
+								image size is at least 1920px wide and 1080px tall.
+							</p>
 						</div>
 					</div>
-				</div>
+
+					<div>
+						<label for="hero_description" class="block text-sm font-medium text-gray-700">
+							Hero Description
+						</label>
+						<div class="mt-1">
+							<textarea
+								id="hero_description"
+								name="hero_description"
+								rows="7"
+								class="my_input"
+								bind:value={homepage.hero_description}
+							/>
+						</div>
+					</div>
+				</HomeSection>
 
 				<!-- About Section -->
-				<div class="mt-10 shadow-2xl p-10">
-					<div class="form-header p-8 bg-indigo-500 rounded-t-lg">
-						<!-- bg-indigo-500 -->
-						<h2 class="text-5xl text-white font-bold">About Section</h2>
-						<p class=" text-white text-l	mt-3">
-							This is the section that appears at the about section. It contains a title, a
-							description, and an image.
-						</p>
-					</div>
-					<div class="space-y-5 mt-5">
-						<div>
-							<label for="hero_title" class="block text-sm font-medium text-gray-700">
-								Hero Title
-							</label>
-							<div class="mt-1">
-								<input
-									type="text"
-									name="hero_title"
-									id="hero_title"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									bind:value={homepage.hero_title}
-								/>
-							</div>
-						</div>
-
-						<div>
-							<label for="hero_image" class="block text-sm font-medium text-gray-700">
-								Hero Image
-							</label>
-							<div class="mt-1">
+				<HomeSection
+					title="About Section"
+					description="This is the section that appears at the about section. It contains a title, a
+							description, and an image."
+				>
+					<div>
+						<label for="about_image" class="my_label"> About Image </label>
+						<div class="mt-1">
+							<div class="image_input_group">
 								<input
 									type="text"
 									name="about_image"
 									id="about_image"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+									class="my_input"
 									bind:value={homepage.about_image}
 								/>
-								<p class="mt-2 text-sm text-gray-500">
-									Enter the URL of the image you want to use for the hero section. The recommended
-									image size is at least 1920px wide and 1080px tall.
-								</p>
+								<ImagePreview image={homepage.about_image} />
 							</div>
-						</div>
-
-						<div>
-							<label for="hero_description" class="block text-sm font-medium text-gray-700">
-								About Description
-							</label>
-							<div class="mt-1">
-								<textarea
-									id="hero_description"
-									name="hero_description"
-									rows="3"
-									class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									bind:value={homepage.about_text}
-								/>
-							</div>
+							<p class="mt-2 text-sm text-gray-500">
+								Enter the URL of the image you want to use for the about section. The recommended
+								image size is at least 1920px wide and 1080px tall.
+							</p>
 						</div>
 					</div>
-				</div>
+
+					<div>
+						<label for="about_text" class="my_label"> About Text </label>
+						<div class="mt-1">
+							<textarea
+								id="about_text"
+								name="about_text"
+								rows="7"
+								class="my_input"
+								bind:value={homepage.about_text}
+							/>
+						</div>
+					</div>
+				</HomeSection>
+
+				<HomeSection
+					title="Availability Section"
+					description="This is the section that appears at the about section. It contains a title, a description, and an image."
+				>
+					<div>
+						<label for="availability_title" class="my_label">Title</label>
+						<input type="text" bind:value={homepage.section1_title} class="my_input" />
+					</div>
+
+					<div>
+						<label for="section1_image" class="my_label"> Image 1 </label>
+						<div class="mt-1">
+							<div class="image_input_group">
+								<input
+									type="text"
+									name="section1_image"
+									id="section1_image"
+									class="my_input"
+									bind:value={homepage.section1_image}
+								/>
+								<ImagePreview image={homepage.section1_image} />
+							</div>
+							<p class="mt-2 text-sm text-gray-500">
+								Enter the URL of the image you want to use for the about section. The recommended
+								image size is at least 1080px wide and 1920px tall.
+							</p>
+						</div>
+					</div>
+
+					<div>
+						<label for="section1_image_2" class="my_label"> Image 2 </label>
+						<div class="mt-1">
+							<div class="image_input_group">
+								<input
+									type="text"
+									name="section1_image_2"
+									id="section1_image_2"
+									class="my_input"
+									bind:value={homepage.section1_image_2}
+								/>
+								<ImagePreview image={homepage.section1_image_2} />
+							</div>
+							<p class="mt-2 text-sm text-gray-500">
+								Enter the URL of the image you want to use for the about section. The recommended
+								image size is at least 1920px wide and 1080px tall.
+							</p>
+						</div>
+					</div>
+
+					<div>
+						<label for="availability_text" class="my_label"> Text </label>
+						<div class="mt-1">
+							<textarea
+								id="availability_text"
+								name="availability_text"
+								rows="7"
+								class="my_input"
+								bind:value={homepage.section1_text}
+							/>
+						</div>
+					</div>
+				</HomeSection>
+
+				<HomeSection title="Contact Section" description="You can edit all contact details here">
+					<div>
+						<label for="ig" class="my_label">Instagram URL</label>
+						<input type="text" bind:value={homepage.instagram_url} class="my_input" />
+					</div>
+
+					<div>
+						<label for="fb" class="my_label">Facebook URL</label>
+						<input type="text" bind:value={homepage.facebook_url} class="my_input" />
+					</div>
+
+					<div>
+						<label for="twitter" class="my_label">Twitter URL</label>
+						<input type="text" bind:value={homepage.twitter_url} class="my_input" />
+					</div>
+
+					<div>
+						<label for="wa_url" class="my_label">Whatsapp URL</label>
+						<input type="text" bind:value={homepage.whatsapp_url} class="my_input" />
+					</div>
+
+					<div>
+						<label for="email" class="my_label">Email</label>
+						<input type="email" bind:value={homepage.contact_email} class="my_input" />
+					</div>
+
+					<div>
+						<label for="wa_no" class="my_label">Whatsapp Number</label>
+						<input type="text" bind:value={homepage.whatsapp_number} class="my_input" />
+					</div>
+				</HomeSection>
 			</form>
 		{/if}
 	</div>
