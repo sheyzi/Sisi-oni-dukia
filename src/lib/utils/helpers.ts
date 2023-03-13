@@ -11,6 +11,10 @@ export const getApartmentUrl = (apartment: any) => {
 	return `/apartments/${apartment.slug}`;
 };
 
+export const getAdminApartmentUrl = (apartment: any) => {
+	return `/admin/apartments/edit/${apartment.slug}`;
+};
+
 export const generateApartmentWhatsAppLink = (
 	apartment: any,
 	whatsapp_number: string,
@@ -23,12 +27,16 @@ export const generateApartmentWhatsAppLink = (
 	return link;
 };
 
-export const removeEmptyStrings = (obj: any) => {
-	Object.keys(obj).forEach((key) => {
-		if (obj[key] && typeof obj[key] === 'object') removeEmptyStrings(obj[key]);
-		else if (obj[key] === '') delete obj[key];
+export const sanitizeData = (obj: any) => {
+	const newObj = JSON.parse(JSON.stringify(obj));
+	// It removes empty strings or empty arrays from data objects
+	Object.keys(newObj).forEach((key) => {
+		if (newObj[key] && typeof newObj[key] === 'object' && !Array.isArray(newObj[key]))
+			sanitizeData(newObj[key]);
+		else if (newObj[key] === '' || (Array.isArray(newObj[key]) && newObj[key].length === 0))
+			delete newObj[key];
 	});
-	return obj;
+	return newObj;
 };
 
 export const showToastr = (message: string, type: string | null) => {
@@ -36,28 +44,28 @@ export const showToastr = (message: string, type: string | null) => {
 		if (type === 'success') {
 			toast(message, {
 				style: 'background: #c6f6d5; color: #38a169;',
-				position: 'top-right'
+				position: 'bottom-right'
 			});
 		} else if (type === 'error') {
 			toast(message, {
 				style: 'background: #fed7d7; color: #e53e3e;',
-				position: 'top-right'
+				position: 'bottom-right'
 			});
 		} else if (type === 'warning') {
 			toast(message, {
 				style: 'background: #fff3cd; color: #fbbf24;',
-				position: 'top-right'
+				position: 'bottom-right'
 			});
 		} else if (type === 'info') {
 			// Blue background with white text
 			toast(message, {
 				style: 'background: #e2e8f0; color: #4299e1;',
-				position: 'top-right'
+				position: 'bottom-right'
 			});
 		} else {
 			toast(message, {
 				style: 'background: #e2e8f0; color: #4299e1;',
-				position: 'top-right'
+				position: 'bottom-right'
 			});
 		}
 	}

@@ -1,4 +1,4 @@
-<div class="navbar bg-neutral text-neutral-content">
+<div class="navbar bg-indigo-500 text-primary-content">
 	<div class="flex-1">
 		<a href="/admin" class="btn btn-ghost normal-case text-xl">Sisi Oni Dukia</a>
 	</div>

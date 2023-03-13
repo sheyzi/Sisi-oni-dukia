@@ -23,7 +23,6 @@
 	};
 
 	const saveChanges = async () => {
-		console.log(homepage);
 		loading = true;
 		try {
 			const { error } = await supabase.from('homepage').update(homepage).eq('id', homepage.id);

@@ -21,6 +21,7 @@ specifiers:
   postcss: ^8.4.21
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
+  slugify: ^1.6.5
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   svelte-french-toast: ^1.0.3
@@ -39,6 +40,7 @@ dependencies:
   daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   gsap: 3.11.4
   iconify-icon: 1.0.3
+  slugify: 1.6.5
   svelte-french-toast: 1.0.3_svelte@3.55.1
   zod: 3.20.6
 
@@ -1977,6 +1979,11 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /slugify/1.6.5:
+    resolution: {integrity: sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==}
+    engines: {node: '>=8.0.0'}
+    dev: false
 
   /sorcery/0.11.0:
     resolution: {integrity: sha512-J69LQ22xrQB1cIFJhPfgtLuI6BpWRiWu1Y3vSsIwK/eAScqJxd/+CJlUuHQRdX2C9NGFamq+KqNywGgaThwfHw==}

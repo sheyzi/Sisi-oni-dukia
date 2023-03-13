@@ -2,7 +2,7 @@
 	import { signInWithEmail } from './logic';
 	import { loginSchema } from './schema';
 	import { z } from 'zod';
-	import { removeEmptyStrings } from '$lib/utils/helpers';
+	import { sanitizeData } from '$lib/utils/helpers';
 	import { goto } from '$app/navigation';
 
 	let data: any = {};
@@ -13,7 +13,7 @@
 		loading = true;
 		errors = {};
 		try {
-			await loginSchema.parse(removeEmptyStrings(data));
+			await loginSchema.parse(sanitizeData(data));
 			const result = await signInWithEmail(data);
 			await goto('/admin');
 		} catch (err: any) {

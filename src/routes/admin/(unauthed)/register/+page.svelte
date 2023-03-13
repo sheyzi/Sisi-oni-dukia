@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { z } from 'zod';
-	import { removeEmptyStrings } from '$lib/utils/helpers';
+	import { sanitizeData } from '$lib/utils/helpers';
 	import { registerSchema } from './schema';
 	import { signUp } from './logic';
 	import { goto } from '$app/navigation';
@@ -14,7 +14,7 @@
 		errors = {};
 
 		try {
-			registerSchema.parse(removeEmptyStrings(data));
+			registerSchema.parse(sanitizeData(data));
 			await signUp(data);
 			await goto('/admin/register/success');
 		} catch (err: any) {
