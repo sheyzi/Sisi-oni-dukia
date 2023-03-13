@@ -103,7 +103,7 @@
 	<title>Add new apartment - Admin</title>
 </svelte:head>
 
-<div>
+<div class="mb-10">
 	<h2 class="text-3xl font-semibold">Add a new apartment</h2>
 
 	<form class="mt-5" on:submit|preventDefault={createApartment}>
