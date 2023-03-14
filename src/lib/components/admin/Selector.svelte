@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import type { string } from 'zod';
 
@@ -23,7 +23,7 @@
 	export let placeholder: string;
 
 	let selected: any;
-	let selectedArray: any = [];
+	export let selectedArray: any = [];
 
 	function onSelected(option: any) {
 		dispatch('selected', option);
@@ -72,7 +72,7 @@
 	>
 		<div>
 			{#if selectMultiple}
-				{#if selected}
+				{#if selectedArray.length}
 					<div class="flex gap-1 flex-wrap w-full">
 						{#each selectedArray as selectedArrayElement}
 							<p class="p-1 bg-[#f0f0f0] rounded">

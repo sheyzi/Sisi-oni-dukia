@@ -309,7 +309,13 @@
 		</div>
 
 		<div class="form-control">
-			<button class="btn">Create</button>
+			<button class="btn"
+				>{#if loading}
+					<iconify-icon icon="eos-icons:bubble-loading" width="20" />
+				{:else}
+					Create
+				{/if}</button
+			>
 		</div>
 	</form>
 </div>
