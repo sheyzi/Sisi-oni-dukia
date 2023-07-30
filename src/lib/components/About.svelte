@@ -23,15 +23,15 @@
 </script>
 
 <section class="md:py-10 py-5 max-w-5xl mx-auto px-5 about">
-	<div class="grid items-center">
-		<div class="title-cover" style="background-image: url({image});">
-			<!-- <img src={image} class="hidden md:block" alt="" /> -->
+	<div class="flex justify-center items-center">
+		<!-- <div class="grid items-center"> -->
+		<!-- <div class="title-cover" style="background-image: url({image});">
 			<div class="md:hidden">
 				<h1 class="md:text-3xl  text-3xl text-center  font-kaushan text-white welcome-title">
 					Welcome to <br /><span class="font-serif md:text-4xl text-4xl">Sisi Oni Dukia</span>
 				</h1>
 			</div>
-		</div>
+		</div> -->
 		<div class="space-y-3 item-2 text-center md:text-left">
 			<h1 class="md:text-3xl hidden md:block text-3xl  font-kaushan text-black welcome-title">
 				Welcome to <br /><span class="font-serif md:text-4xl text-4xl">Sisi Oni Dukia</span>

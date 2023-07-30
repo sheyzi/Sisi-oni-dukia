@@ -36,7 +36,7 @@
 	});
 </script>
 
-<section id="hero" class="max-w-[1500px] mx-auto p-5">
+<section id="hero" class="max-w-[1500px] mx-auto ">
 	<div class="wrapper min-h-[600px] relative" style="background-image: url({image});">
 		<div
 			class="absolute bottom-0 left-0 md:px-10 p-5 md:py-5 md:space-y-10 space-y-5 text-white content h-full  flex flex-col justify-end "

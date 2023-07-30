@@ -58,4 +58,3 @@
 />
 <Amenities />
 <Locations locations={homepage.home_locations} />
-<SpecialRequest />

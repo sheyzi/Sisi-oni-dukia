@@ -9,7 +9,7 @@
 	{#each apartments as apartment}
 		<div class="card w-full bg-base-100 rounded shadow-sm transition-shadow hover:shadow  mt-10">
 			<a href={getApartmentUrl(apartment)}>
-				<span class="badge absolute top-5 bg-black text-white right-5 z-10"
+				<span class="badge bg-[#a79a86] border-[#a79a86] absolute top-5  text-black right-5 z-10"
 					>{apartment.location}</span
 				>
 				<figure>
