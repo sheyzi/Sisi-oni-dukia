@@ -4,14 +4,14 @@
 	export let email: string;
 </script>
 
-<footer class="md:py-10 py-5 block   footer bg-black text-white">
+<footer class="md:py-10 py-5 block   footer bg-[#A79A86] text-white">
 	<div
 		class="flex justify-between md:px-10 px-5 max-w-5xl mx-auto items-center flex-col md:flex-row w-full"
 	>
 		<div class="text-center">
 			<a
 				href="/"
-				class="text-[#A79A86] w-full items-center font-serif md:text-3xl text-2xl font-semibold md:space-x-2"
+				class="text-white w-full items-center font-serif md:text-3xl text-2xl font-semibold md:space-x-2"
 			>
 				<p class="text-center ">Sisi Oni Dukia</p>
 			</a>

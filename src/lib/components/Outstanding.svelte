@@ -165,7 +165,7 @@
 					{text}
 				</p>
 				<div class="outstanding-button-wrapper">
-					<a href={whatsapp_url} class="outstanding-button text-black">Request Availability</a>
+					<a href={whatsapp_url} class="outstanding-button text-[#A79A86]">Request Availability</a>
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,7 @@
 
 	.outstanding-button {
 		padding: 1rem 2rem;
-		border: 1px solid #000;
+		border: 1px solid #a79a86;
 		color: #000;
 		margin-top: 1rem;
 		font-weight: 600;
@@ -205,7 +205,7 @@
 	}
 
 	.outstanding-button:hover {
-		background-color: #000;
+		background-color: #a79a86;
 		color: #fff;
 	}
 

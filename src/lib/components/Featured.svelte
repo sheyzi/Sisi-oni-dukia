@@ -11,7 +11,7 @@
 		<div class="flex justify-center mt-10">
 			<a
 				href="/apartments"
-				class="btn border-black text-black hover:bg-black rounded-none btn-outline"
+				class="btn border-[#A79A86] text-[#A79A86] hover:bg-[#A79A86] rounded-none btn-outline "
 				>View All Apartments</a
 			>
 		</div>

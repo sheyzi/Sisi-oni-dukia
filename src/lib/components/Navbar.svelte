@@ -6,13 +6,13 @@
 	};
 </script>
 
-<div class="bg-black text-white">
+<div class="bg-[#A79A86] text-white">
 	<nav class="max-w-6xl mx-auto md:p-8 p-5 flex items-center justify-between">
 		<ul>
 			<li>
 				<a
 					href="/"
-					class="text-[#A79A86] flex items-center font-serif md:text-3xl text-2xl font-semibold space-x-2"
+					class="text-whiite flex items-center font-serif md:text-3xl text-2xl font-semibold space-x-2"
 				>
 					<!-- <iconify-icon inline icon="clarity:dot-circle-line" /> -->
 					<p>Sisi Oni Dukia</p>
@@ -68,7 +68,7 @@
 	}
 
 	.nav-item:hover {
-		color: #a79a86;
+		color: #000;
 		transform: translateY(-8px);
 	}
 
